@@ -13,5 +13,22 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-8"></div>
+  {% for whatever in blog.blogs  %}
+  <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ whatever.headline}}</h5>
+          <p class="card-text"> {{ whatever.date }} </p>
+          <a href="..//{{whatever.source}}" 
+          target="_blank">Keep Reading</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %} 
+
+</div>
 </div>
 {% endblock %}
+
